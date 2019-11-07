@@ -1,0 +1,51 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+//Iconos
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+// Variables
+@import "variables";
+//Color
+$primary: red;
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+h-screen{
+	height:100vh;
+}
+
+.btn-facebook, .btn-twitter, .btn-google{
+	&:hover, &:active, &:focus{
+	color: white;
+	}
+}
+
+.btn-facebook{
+	background-color: #3b5998;
+	color: white;
+	padding:6px 18px;
+}
+.btn-twitter{
+	background-color: #1da1f2;
+	color: white;
+	padding:6px 18px;
+}
+.btn-google{
+	background-color: #ea4335;
+	color: white;
+	padding:6px 18px;
+}
+.center-text {
+    vertical-align: text-bottom;
+}
+
+.derecha
+{
+	float:right
+}
+.izquierda
+{
+	float:left
+}
