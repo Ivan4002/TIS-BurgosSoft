@@ -67,7 +67,7 @@
                     </form>
                 </div>
                 <div class="panel-footer">
-                    <a href="#" class="btn btn-facebook">
+                    <a href="{{route('login.facebook')}}" class="btn btn-facebook">
                         <i class="fa fa-facebook-f"></i>
                         Facebook
                     </a>

@@ -1,5 +1,10 @@
 <?php
 
+Route::get('login/facebook','SocialLoginController@redirectToFacebook')->name('login.facebook');
+Route::get('login/facebook/callback','SocialLoginController@handleFacebookCallback');
+Auth::routes();
+
+
 Route::get('/', 'ProjectController@home')->name('home');
 Route::get('/quienes-sommos','ProjectController@about')->name('about');
 
@@ -18,4 +23,4 @@ Route::delete('/impersonations', 'ImpersonationsController@destroy')->name('impe
 
 Route::get('/contacto','ProjectController@contact')->name('contact');
 Route::post('contact','MessageController@store')->name('messages.store');
-Auth::routes();
+
