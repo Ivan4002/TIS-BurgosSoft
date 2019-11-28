@@ -13,8 +13,7 @@ class SocialLoginController extends Controller
     }
     public function handleFacebookCallback()
     {
- 		// $facebookUser = Socialite::driver('facebook')->user();
-
- 		// dd($facebookUser);
+ 		$facebookUser = Socialite::driver('facebook')->user();
+ 		dd($facebookUser);
     }
 }
