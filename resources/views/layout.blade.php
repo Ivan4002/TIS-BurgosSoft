@@ -27,7 +27,16 @@
 		@include('partials.nav')
 		@include('partials.session-status')
 	</header>
-
+	   @if(session()->has('success'))
+	    <div class="container">
+	        <div class="alert alert-success">{{ session('success') }}</div>
+	    </div>
+       @endif
+       	   @if(session()->has('warning'))
+	    <div class="container">
+	        <div class="alert alert-warning">{{ session('warning') }}</div>
+	    </div>
+       @endif
 	<main class="py-3">
 		@yield('content')
 	</main>

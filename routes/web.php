@@ -1,7 +1,9 @@
 <?php
 
-Route::get('login/facebook','SocialLoginController@redirectToFacebook')->name('login.facebook');
-Route::get('login/facebook/callback','SocialLoginController@handleFacebookCallback');
+Route::get('login/{socialNetwork}','SocialLoginController@redirectToSocialNetwork')
+->name('login.social')->middleware('guest','social_network');
+Route::get('login/{socialNetwork}/callback','SocialLoginController@handleSocialNetworkCallback')
+->middleware('guest');
 Auth::routes();
 
 

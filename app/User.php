@@ -2,8 +2,9 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
+use App\SocialProfile;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
@@ -30,5 +31,14 @@ class User extends Authenticatable
     {
         // si el usuario es administrador
         return $this->id === 1;
+    }
+    public function profiles()
+    {
+        return $this->hasMany(SocialProfile::class);
+    }
+    public function getAvatarAttribute()
+    {
+
+            return $this->profiles->last()->avatar;
     }
 }

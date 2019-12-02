@@ -67,15 +67,15 @@
                     </form>
                 </div>
                 <div class="panel-footer">
-                    <a href="{{route('login.facebook')}}" class="btn btn-facebook">
+                    <a href="{{route('login.social','facebook')}}" class="btn btn-facebook">
                         <i class="fa fa-facebook-f"></i>
                         Facebook
                     </a>
-                        <a href="#" class="btn btn-twitter">
+                        <a href="{{route('login.social','twitter')}}" class="btn btn-twitter">
                         <i class="fa fa-twitter"></i>
                          Twitter
                     </a>
-                        <a href="#" class="btn btn-google">
+                        <a href="{{route('login.social','google')}}" class="btn btn-google">
                         <i class="fa fa-google-plus"></i>
                         Google
                     </a>

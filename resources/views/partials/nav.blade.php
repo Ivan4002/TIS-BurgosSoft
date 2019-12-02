@@ -20,11 +20,16 @@
 				<li class="nav-item"><a class="nav-link {{ setActive('contact') }}" href="{{ route('contact') }} ">Contáctame</a></li>
 
 				@auth
-				<li class="nav-item"><a href="{{ route('admin.users.index') }}">Usuarios</a></li>
+				<li class="nav-item">
+
+					<a href="{{ route('admin.users.index') }}">Usuarios</a></li>
 					<li class="nav-item"><a class="nav-link" href="#" onclick="event.preventDefault();
 	                     document.getElementById('logout-form').submit();"
 	                     >Cerrar sesión</a>
-						<li><a href="#">{{ auth()->user()->name }}</a></li>
+						<li>
+							<a href="#">
+								<img height="50px" src="{{Auth::user()->avatar}}">
+								{{ auth()->user()->name }}</a></li>
 	              </li>
 	              @if(session()->has('impersonator_id'))
 				<form  method="POST" action=" {{route('impersonations.destroy')}} "
