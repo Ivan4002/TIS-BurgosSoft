@@ -26,3 +26,6 @@ Route::delete('/impersonations', 'ImpersonationsController@destroy')->name('impe
 Route::get('/contacto','ProjectController@contact')->name('contact');
 Route::post('contact','MessageController@store')->name('messages.store');
 
+Route::get('admin', function(){
+	return view('admin.dashboard');
+});
