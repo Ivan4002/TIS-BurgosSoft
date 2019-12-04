@@ -66,7 +66,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="panel-footer">
+                <div class="panel-footer ">
                     <a href="{{route('login.social','facebook')}}" class="btn btn-facebook">
                         <i class="fa fa-facebook-f"></i>
                         Facebook

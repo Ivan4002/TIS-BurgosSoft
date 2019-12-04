@@ -4,7 +4,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-lg-6">
-				<h1 class="display-4 text-primary">Desarrollo Web</h1>
+				<h1 class="display-4 text-primary">Convocatorias</h1>
 				<p class="lead text-secondary">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -15,10 +15,12 @@
 
 				</p>
 				<a class="btn btn-lg btn-block btn-success" href="{{ route('contact')}}">Contáctame</a class="btn btn-lg btn-block">
+				@auth
 				<a class="btn btn-lg btn-block btn-outline-primary" href="{{ route('projects.index')}}">Portafolio</a>
+				@endauth
 			</div>
-			<div class="col-12">
-				<img class="img-fluid mb-4" src="/img/home.svg" alt="Desarrollo web">
+			<div class="col-12 col-lg-6">
+				<img class="img-responsive mb-4" src="/img/home.svg" alt="Desarrollo web">
 			</div>
 		</div>
 	</div>

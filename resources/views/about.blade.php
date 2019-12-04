@@ -4,8 +4,8 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="col-12">
-				<img class="img-fluid mb-4" src="/img/about.svg" alt="Quienes somos">
+			<div class="col-12 col-lg-6">
+				<img class="img-responsive mb-4" src="/img/about.svg" alt="Quienes somos">
 			</div>
 			<div class="col-12 col-lg-6">
 				<h1 class="display-4 text-primary">Desarrollo Web</h1>
