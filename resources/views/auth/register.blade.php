@@ -1,5 +1,5 @@
 @extends('layout')
-
+@section('title','Burgossoft')
 @section('content')
 <div class="container">
     <div class="row">

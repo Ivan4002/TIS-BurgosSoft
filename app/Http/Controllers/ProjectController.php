@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SaveProjectRequest;
+use App\Post;
 use App\Project;
 use Illuminate\Http\Request;
-use App\Http\Requests\SaveProjectRequest;
+use Illuminate\Support\Facades\App;
 
 class ProjectController extends Controller
 {
@@ -42,11 +44,6 @@ class ProjectController extends Controller
         $project->save();
 
          return redirect()->route('projects.index')->with('status' , 'El proyecto fue creado con éxito');
-    }
-
-     public function home()
-    {
-        return view('home');
     }
      public function about()
     {

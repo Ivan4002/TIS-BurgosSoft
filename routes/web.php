@@ -20,8 +20,19 @@ Route::get('login/{socialNetwork}/callback','SocialLoginController@handleSocialN
         Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 
-Route::get('/', 'ProjectController@home')->name('home');
+Route::get('/', 'PagesController@home')->name('home');
+Route::get('convocatoria/{id}', 'PostsController@show');
 Route::get('/quienes-sommos','ProjectController@about')->name('about');
+
+Route::group(['prefix'=>'admin3',
+              'namespace'=>'Admin',
+              'middleware'=>'auth'],
+function(){
+    Route::get('/','Admin3Controller@index')->name('dashboard');
+    Route::get('posts', 'PostsController@index')->name('admin.posts.index');
+    Route::get('posts/create', 'PostsController@create')->name('admin.posts.create');
+    Route::post('posts/create', 'PostsController@store')->name('admin.posts.store');
+});
 
 Route::get('/portafolio', 'ProjectController@index')->name('projects.index');
 Route::get('/portafolio/crear','ProjectController@create')->name('projects.create');
@@ -39,6 +50,3 @@ Route::delete('/impersonations', 'ImpersonationsController@destroy')->name('impe
 Route::get('/contacto','ProjectController@contact')->name('contact');
 Route::post('contact','MessageController@store')->name('messages.store');
 
-Route::get('admin1',function(){
-    return view('admin.dashboard');
-});

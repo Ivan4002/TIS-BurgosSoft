@@ -1,24 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ config('app.locale') }}">
 <head>
 	<title>@yield('title','burgossoft')</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<link rel="stylesheet" href="{{ mix('css/app.css') }}">
 	<script src="{{ mix('js/app.js') }}" defer></script>
-	<style>
-		.pie{
-
-    position:fixed;
-    bottom:0px;
-    width:100%;
-    font-size:0.7em;
-    margin-bottom:15px;
-
-
-}
-
-	</style>
+	@stack('scripts')
 </head>
 <body>
   <div id="app" class="d-flex flex-column h-creen bg-dark ">

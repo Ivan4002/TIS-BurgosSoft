@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title','Contact')
+@section('title','Contáctame | Burgossoft')
 
 @section('content')
 	<div class="container">

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-default navbar-expand-ml bg-white shadow-sm">
    <div class="container">
-			<a class="navbar-brand" href="{{ route('home')}}">
+			<a class="navbar-brand espacio" href="{{ route('home')}}">
 					{{config( 'app.name' )}}
 			</a>
 			 <button class="navbar-toggle navbar-light"
@@ -14,13 +14,19 @@
 	        </button>
 	    <div class="collapse navbar-collapse" id="app-navbar-collapse">
 	  		<ul class="nav nav-pills navbar-right espacio">
-	  			<li class="nav-item espacio"><a class="nav-link {{ setActive('home') }}" href="{{ route('home') }}">Inicio</a></li>
+	  			<li class="nav-item espacio"><a class="nav-link {{ setActive('home') }}" href="{{ route('home') }}">
+				<i class="fa fa-home"></i>
+	  			Inicio</a></li>
 
-				<li class="nav-item espacio"><a class="nav-link {{ setActive('about') }}" href="{{ route('about') }} ">Acerca de nosotros</a></li>
+				<li class="nav-item espacio"><a class="nav-link {{ setActive('about') }}" href="{{ route('about') }} ">
+				<i class="fa fa-users"></i>
+				Acerca de nosotros</a></li>
 
 				<li class="nav-item espacio"><a class="nav-link {{ setActive('projects.index') }}" href="{{ route('projects.index') }} ">Requisitos</a></li>
 
-				<li class="nav-item espacio"><a class="nav-link {{ setActive('contact') }}" href="{{ route('contact') }} ">Contáctame</a></li>
+				<li class="nav-item espacio"><a class="nav-link {{ setActive('contact') }}" href="{{ route('contact') }} ">
+				<i class="fa fa-envelope-open"></i>
+				Contáctame</a></li>
 
 				@auth
 				<li class="nav-item espacio">
@@ -30,7 +36,7 @@
 	                     document.getElementById('logout-form').submit();"
 	                     >Cerrar sesión</a>
 						<li>
-							<a href="#">
+							<a href="#" class="espacio">
 								<img height="50px" src="{{Auth::user()->avatar}}">
 								{{ auth()->user()->name }}</a></li>
 	              </li>
