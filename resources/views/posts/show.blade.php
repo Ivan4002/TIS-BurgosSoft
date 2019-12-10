@@ -1,4 +1,5 @@
 @extends('layout')
+@section('title','burgosSoft')
 @section('content')
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,7 +11,11 @@
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script id="dsq-count-scr" src="//zendero.disqus.com/count.js" async></script>
-  <article class="post image-w-text container">
+    {{-- empieza la visata completa de la convocatoria --}}
+<div class="posts container">
+ <div class="row">
+  <div class="col-12 col-lg-12">
+   <article class="post no-imga">
     <div class="content-post">
       <header class="container-flex space-between">
         <div class="date">
@@ -21,34 +26,21 @@
         </div>
       </header>
       <h1>{{ $post->title }}</h1>
-      <div class="divider"></div>
+      {{-- <div class="divider"></div> --}}
       <div class="image-w-text">
         {!! $post->body !!}
       </div>
 
       <footer class="container-flex space-between">
-        <div class="buttons-social-media-share">
-          <ul class="share-buttons">
-            <li><a href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="img/flat_web_icon_set/color/Facebook.png"></a></li>
-            <li><a href="https://twitter.com/intent/tweet?source=&text=:%20" target="_blank" title="Tweet"><img alt="Tweet" src="img/flat_web_icon_set/color/Twitter.png"></a></li>
-            <li><a href="https://plus.google.com/share?url=" target="_blank" title="Share on Google+"><img alt="Share on Google+" src="img/flat_web_icon_set/color/Google+.png"></a></li>
-            <li><a href="http://pinterest.com/pin/create/button/?url=&description=" target="_blank" title="Pin it"><img alt="Pin it" src="img/flat_web_icon_set/color/Pinterest.png"></a></li>
-          </ul>
-        </div>
         <div class="tags container-flex">
           @foreach ($post->tags as $tag)
             <span class="tag c-gray-1 text-capitalize">#{{ $tag->name }}</span>
           @endforeach
         </div>
       </footer>
-      <div class="comments">
-        <div class="divider"></div>
-        <div id="disqus_thread"></div>
-        @include('scripts.disqus-script')
-      </div><!-- .comments -->
     </div>
-  </article>
+  	</article>
+   </div>
+  </div>
+</div>
 @endsection
-{{-- @push('scripts')
-	 <script id="dsq-count-scr" src="//zendero.disqus.com/count.js" async></script>
-@endpush

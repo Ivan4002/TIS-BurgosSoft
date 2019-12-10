@@ -12,7 +12,7 @@
 					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p> --}}
+</p> --}}
 
 				{{-- <section class="posts container"> --}}
 							<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,7 +40,7 @@
 										<p>{{ $post->excerpt }}</p>
 										<footer class="container-flex space-between">
 											<div class="read-more">
-												<a href="convocatoria/{{$post->id}}" class="text-uppercase c-green">Leer más</a>
+												<a href="convocatoria/{{$post->url}}" class="text-uppercase c-green">Leer más</a>
 											</div>
 											<div class="tags container-flex">
 												@foreach ($post->tags as $tag)

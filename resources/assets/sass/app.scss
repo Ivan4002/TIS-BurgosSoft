@@ -50,24 +50,41 @@ h-screen{
 	float:left
 }
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: #fff;
+    color: #34465d;
     background-color: rgba(56, 178, 172, 1);
 }
 /*estilo para el boton */
 
 .btn-outline-primary {
   color: #38b2ac;
-  border-color: #38b2ac;
+  border-color: #34465d;
 }
 .espacio{
 	top:0.3em;
 }
-		.pie{
+.espacio2{
+	top:-0.5em;
+}
+.pie{
 
-    position:fixed;
+    position:absolute;
     bottom:0px;
     width:100%;
     font-size:0.7em;
     margin-bottom:15px;
 }
+html {
+  min-height: 100%;
+  position: relative;
+}
+body {
+  margin: 0;
+  margin-bottom: 40px;
+}
+/* cambiar el color de fondo a la barra */
+.navbar.navbar-default {
+    background-color: #34465d;
+}
+
+
 

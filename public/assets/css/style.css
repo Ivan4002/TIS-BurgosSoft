@@ -3,6 +3,14 @@
 	font-family: 'lato', sans-serif;
 }
 */
+.der
+{
+	float:right
+}
+.izq
+{
+	float:left
+}
 .preload{
 	border:1.2px solid #1abc9c;
 	width: 50%;
@@ -33,7 +41,7 @@ header nav li a:hover{
 }
 .post .content-post{
 	position: relative;
-	padding: 30px 100px;
+	padding: 60px 100px;
 }
 .post .category{
 	background: #1abc9c;
@@ -69,10 +77,12 @@ header nav li a:hover{
 }
 .post .tag{
 	margin: 0 5px;
+	float:right
 }
 .post .tag a{
 	color: inherit;
 	font-size: inherit;
+
 }
 .post footer{
 	margin-top: 45px;

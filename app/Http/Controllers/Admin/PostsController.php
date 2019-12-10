@@ -34,13 +34,24 @@ class PostsController extends Controller
         ]);
         $post=new Post;
         $post->title = $request->get('title');
+        $post->url = str_slug($request->get('title'));
         $post->body = $request->get('body');
         $post->excerpt = $request->get('excerpt');
         $post->published_at =$request->has('published_at') ? Carbon::parse($request->get('published_at')) : null;
         $post->category_id = $request->get('category');
         //etiquetas
         $post->save();
-        $post->tags()->attach($request->get('tags'));
+
+        $tags = [];
+
+        foreach ($request->get('tags') as $tag)
+        {
+            $tags[] = Tag::find($tag) ? $tag : Tag::create(['name' => $tag])->id;
+
+        }
+
+
+        $post->tags()->sync($tags);
         return back()->with('flash', 'Tu publicación  ha sido creada');
     }
 }

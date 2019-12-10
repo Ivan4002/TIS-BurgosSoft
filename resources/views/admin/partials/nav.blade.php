@@ -2,6 +2,17 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+
+           <li class="nav-item">
+            <a href="{{route('dashboard')}}" class="nav-link">
+              <i class="nav-icon fas fa-home"></i>
+              <p>
+                Inicio
+                <span class="right badge badge-success">New</span>
+              </p>
+            </a>
+          </li>
+
           <li class="nav-item has-treeview menu-open">
             <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-book"></i>
@@ -27,14 +38,6 @@
 
             </ul>
           </li>
-          <li class="nav-item">
-            <a href="{{route('dashboard')}}" class="nav-link">
-              <i class="nav-icon fas fa-home"></i>
-              <p>
-                Inicio
-                <span class="right badge badge-success">New</span>
-              </p>
-            </a>
-          </li>
+
         </ul>
       </nav>

@@ -1,5 +1,6 @@
 <nav class="navbar navbar-default navbar-expand-ml bg-white shadow-sm">
    <div class="container">
+   			<a class="navbar-left espacio izquierda" href=""><img height="50px" src="/assets/img/burgos-pro.png" alt=""></a>
 			<a class="navbar-brand espacio" href="{{ route('home')}}">
 					{{config( 'app.name' )}}
 			</a>
@@ -12,10 +13,11 @@
 	                        <span class="icon-bar"></span>
 	                        <span class="icon-bar"></span>
 	        </button>
+
 	    <div class="collapse navbar-collapse" id="app-navbar-collapse">
 	  		<ul class="nav nav-pills navbar-right espacio">
 	  			<li class="nav-item espacio"><a class="nav-link {{ setActive('home') }}" href="{{ route('home') }}">
-				<i class="fa fa-home"></i>
+				<i class="fa fa-home fa-lg"></i>
 	  			Inicio</a></li>
 
 				<li class="nav-item espacio"><a class="nav-link {{ setActive('about') }}" href="{{ route('about') }} ">
@@ -37,7 +39,7 @@
 	                     >Cerrar sesión</a>
 						<li>
 							<a href="#" class="espacio">
-								<img height="50px" src="{{Auth::user()->avatar}}">
+								<img height="33px" src="{{Auth::user()->avatar}}">
 								{{ auth()->user()->name }}</a></li>
 	              </li>
 	              @if(session()->has('impersonator_id'))

@@ -29,8 +29,8 @@
 		@yield('content')
 	</main>
 
+@yield('pie')
 	<div class="pie text-center py-3 shadow">
-		@yield('pie')
 		<footer>
 		{{config('app.name') }} | Copyringt @ {{date('Y')}}
 		</footer>

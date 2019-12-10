@@ -108,8 +108,11 @@
 		$(function(){
 		$("#datepicker").datepicker();
 		});
-		$('.select2').select2();
+		$('.select2').select2({
+			tags: true
+		});
 		CKEDITOR.replace('editor');
+		CKEDITOR.config.height =315;
 	</script>
 @endpush
 

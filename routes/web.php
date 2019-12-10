@@ -21,7 +21,7 @@ Route::get('login/{socialNetwork}/callback','SocialLoginController@handleSocialN
 
 
 Route::get('/', 'PagesController@home')->name('home');
-Route::get('convocatoria/{id}', 'PostsController@show');
+Route::get('convocatoria/{post}', 'PostsController@show')->name('posts.show');
 Route::get('/quienes-sommos','ProjectController@about')->name('about');
 
 Route::group(['prefix'=>'admin3',
