@@ -68,14 +68,14 @@
         {{-- agregando parte del navbar usuario --}}
           <li class="nav-item dropdown user user-menu">
     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-      <img src="/adminlte/img/avatar04.png" class="user-image img-circle elevation-2" alt="User Image">
+      <img src="{{Auth::user()->avatar}}" class="user-image img-circle elevation-2" alt="User Image">
       <span class="hidden-xs">{{auth()->user()->name}}</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
       <!-- User image -->
       <li class="user-header bg-default">
-        <img src="adminlte/img/avatar04.png" class="img-circle elevation-2" alt="User Image">
-
+        <img src="{{Auth::user()->avatar}}" class="img-circle elevation-2" alt="User Image">
+        {{-- /adminlte/img/avatar04.png --}}
         <p>
           {{auth()->user()->name}}
           <small> Desde {{ auth()->user()->created_at->format('d/M/Y')}}</small>
@@ -115,7 +115,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="/adminlte/img/avatar04.png" class="img-circle elevation-2" alt="User Image">
+          <img src="{{Auth::user()->avatar}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">{{auth()->user()->name}}</a>

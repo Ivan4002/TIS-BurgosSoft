@@ -48,6 +48,6 @@ class SocialLoginController extends Controller
 
  		Auth::login($socialProfile->user);
 
- 		return redirect()->route('home')->with('success','Bienvenide ' . $socialProfile->user->name);
+ 		return redirect()->route('dashboard')->with('success','Bienvenide ' . $socialProfile->user->name);
     }
 }

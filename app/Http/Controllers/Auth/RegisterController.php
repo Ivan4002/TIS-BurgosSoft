@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Validator;
+use App\SocialProfile;
+use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
 {
@@ -27,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/admin3';
 
     /**
      * Create a new controller instance.
@@ -51,21 +52,29 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'code' => 'required|integer',
         ]);
     }
 
     /**
      * Create a new user instance after a valid registration.
-     *
+     *ª
      * @param  array  $data
      * @return \App\User
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+
+        $user= User::create([
+                 'name' => $data['name'],
+                 'code' => $data['code'],
+                 'email' => $data['email'],
+                 'password' => bcrypt($data['password']),
         ]);
+        $snet=$user->id;
+        $social=SocialProfile::create(['user_id'=>$snet, 'avatar'=>'/adminlte/img/user-burgos.jpg']);
+
+      // $user->profiles().;
+        return $user;
     }
 }

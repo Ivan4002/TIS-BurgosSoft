@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class SocialProfile extends Model
 {
-	protected $guarded = [];
+	protected $fillable = ['user_id', 'social_network_user_id', 'social_network', 'avatar'];
 
 	public static $allowed = ['facebook', 'twitter', 'google'];
 

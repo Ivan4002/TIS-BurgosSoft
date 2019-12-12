@@ -57,9 +57,9 @@
                   <!-- /.input group -->
                 </div>
 				<div class="form-group">
-					<label>Categorias</label>
+					<label>Facultad</label>
 					<select name="category" class="form-control">
-						<option value="">Selecciona una categoría</option>
+						<option value="">Selecciona una Facultad</option>
 						@foreach($categories as $category)
 							<option value="{{ $category->id }}"
 									{{ old('category') == $category->id ? 'selected' : ''}}
@@ -69,7 +69,7 @@
 					{!!$errors->first('category','<span class="help-block text-danger">:message</span>')!!}
 				</div>
 				<div class="form-group">
-					<label>Etiquetas</label>
+					<label>Código de convocatoria</label>
                   <select name="tags[]" class=" select2"
                   	multiple="multiple"
                   	data-placeholder="Selecciona una o más etiquetas" style="width: 100%;">

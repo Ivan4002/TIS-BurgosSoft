@@ -14,7 +14,7 @@
           </li>
 
           <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
+            <a href="#" class="nav-link {{ Route::current()->getName() == 'admin.posts.index' || 'admin.posts.create' ? 'active' : '' }}">
               <i class="nav-icon fas fa-book"></i>
               <p>
                 Convocatoria
@@ -38,6 +38,55 @@
 
             </ul>
           </li>
+          <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link "> {{-- active --}}
+              <i class="nav-icon fa fa-copy"></i>
+              <p>
+                Requisitos
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item ">  {{-- active --}}
+                <a {{ Request::is('admin3/posts') ? '' : '' }} href="{{route('admin.posts.index')}}" {{-- active --}}
+                class="nav-link {{ Route::current()->getName() == 'admin.posts.index' ? '' : '' }}">{{-- active --}}
+                  <i class="far fa-bookmark nav-icon"></i>
+                  <p>Crear Req Indispensables</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('admin.posts.create')}}" class="nav-link {{ Route::current()->getName() == 'admin.posts.create' ? '' : '' }}">{{-- active --}}
+                  <i class="far fa-file-alt nav-icon"></i>
+                  <p>Crear Req Generales</p>
+                </a>
+              </li>
 
+            </ul>
+          </li>
+                    <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link "> {{-- active --}}
+              <i class="nav-icon fa fa-copy"></i>
+              <p>
+                 Calificación de Méritos
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item {{-- active --}}">
+                <a {{ Request::is('admin3/posts') ? '' : '' }} href="{{route('admin.posts.index')}}"
+                class="nav-link {{ Route::current()->getName() == 'admin.posts.index' ? '' : '' }}">{{-- active --}}
+                  <i class="far fa-bookmark nav-icon"></i>
+                  <p>Crear TCM</p>
+                </a>
+              </li>
+{{--               <li class="nav-item">
+                <a href="{{route('admin.posts.create')}}" class="nav-link {{ Route::current()->getName() == 'admin.posts.create' ? 'active' : '' }}">
+                  <i class="far fa-file-alt nav-icon"></i>
+                  <p>Crear Req Generales</p>
+                </a>
+              </li> --}}
+
+            </ul>
+          </li>
         </ul>
       </nav>

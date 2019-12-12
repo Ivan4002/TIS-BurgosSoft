@@ -15,10 +15,10 @@ class CreateSocialProfilesTable extends Migration
     {
         Schema::create('social_profiles', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('user_id');
-            $table->string('social_network_user_id');
-            $table->string('social_network');
-            $table->string('avatar');
+            $table->unsignedInteger('user_id')->nullable();
+            $table->string('social_network_user_id')->nullable();
+            $table->string('social_network')->nullable();
+            $table->string('avatar')->nullable();
             $table->timestamps();
         });
     }
