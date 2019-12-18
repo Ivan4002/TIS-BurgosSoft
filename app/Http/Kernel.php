@@ -57,5 +57,6 @@ class Kernel extends HttpKernel
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'social_network' => \App\Http\Middleware\RedirectIfSocialNetworkNotSupported::class,
+        'roles'  => \App\Http\Middleware\CheckRoles::class,
     ];
 }

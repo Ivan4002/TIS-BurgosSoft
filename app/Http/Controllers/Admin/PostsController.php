@@ -52,6 +52,6 @@ class PostsController extends Controller
 
 
         $post->tags()->sync($tags);
-        return back()->with('flash', 'Tu articulos  ha sido creada');
+        return back()->with('flash', 'Convocatoria ha sido creada');
     }
 }

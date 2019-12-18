@@ -13,34 +13,63 @@
     <script id="dsq-count-scr" src="//zendero.disqus.com/count.js" async></script>
     {{-- empieza la visata completa de la convocatoria --}}
 <div class="posts container">
- <div class="row">
-  <div class="col-12 col-lg-12">
-   <article class="post no-imga">
-    <div class="content-post">
-      <header class="container-flex space-between">
-        <div class="date">
-          <span class="c-gris-1">{{ $post->published_at->format('M d') }}</span>
-        </div>
-        <div class="post-category">
-          <span class="category">{{ $post->category->name }}</span>
-        </div>
-      </header>
-      <h1>{{ $post->title }}</h1>
-      {{-- <div class="divider"></div> --}}
-      <div class="image-w-text">
-        {!! $post->body !!}
-      </div>
+    <div class="row">
+            <div class="col-4 col-lg-6">
+             <article class="post no-imga">
+              <div class="content-post">
+                <header class="container-flex space-between">
+                  <div class="date">
+                    <span class="c-gris-1">{{ $post->published_at->format('M d') }}</span>
+                  </div>
+                  <div class="post-category">
+                    <span class="category">{{ $post->category->name }}</span>
+                  </div>
+                </header>
+                <h1>{{ $post->title }}</h1>
+                {{-- <div class="divider"></div> --}}
+                <div class="image-w-text">
+                  {!! $post->body !!}
+                </div>
 
-      <footer class="container-flex space-between">
-        <div class="tags container-flex">
-          @foreach ($post->tags as $tag)
-            <span class="tag c-gray-1 text-capitalize">#{{ $tag->name }}</span>
-          @endforeach
+                <footer class="container-flex space-between">
+                  <div class="tags container-flex">
+                    @foreach ($post->tags as $tag)
+                      <span class="tag c-gray-1 text-capitalize">#{{ $tag->name }}</span>
+                    @endforeach
+                  </div>
+                </footer>
+              </div>
+            	</article>
+             </div>
+              <div class="col-4 col-lg-6">
+             <article class="post no-imga">
+              <div class="content-post">
+                <header class="container-flex space-between">
+                  <div class="date">
+                    <span class="c-gris-1">{{ $post->published_at->format('M d') }}</span>
+                  </div>
+                  <div class="post-category">
+                    <span class="category">{{ $post->category->name }}</span>
+                  </div>
+                </header>
+                <h1>{{ $post->title }}</h1>
+                {{-- <div class="divider"></div> --}}
+                <div class="image-w-text">
+                  {!! $post->body !!}
+                </div>
+
+                <footer class="container-flex space-between">
+                  <div class="tags container-flex">
+                    @foreach ($post->tags as $tag)
+                      <span class="tag c-gray-1 text-capitalize">#{{ $tag->name }}</span>
+                    @endforeach
+                  </div>
+                </footer>
+              </div>
+              </article>
+             </div>
+
         </div>
-      </footer>
+
     </div>
-  	</article>
-   </div>
-  </div>
-</div>
 @endsection

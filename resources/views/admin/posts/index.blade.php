@@ -13,7 +13,7 @@
 @stop
 
 @section('content')
-    <div class="card">
+    <div class="card card-primary card-outline">
         <div class="card-header">
             <h3 class="card-title">listado de publicaciones</h3>
             <button class="btn btn-primary "style="float:right;" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i> Crear Convocatoria</button>
@@ -38,7 +38,6 @@
         					<td>
         						<a href="{{ route('posts.show', $post) }}"
                         class="btn btn-xs btn-default"
-                        target="_blank"
                         ><i class="fa fa-eye"></i></a>
                     <a href="#" class="btn btn-xs btn-info"><i class="fa fa-edit"></i></a>
         						<a href="#" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>

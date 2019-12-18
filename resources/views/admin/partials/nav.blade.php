@@ -14,22 +14,23 @@
           </li>
 
           <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link {{ Route::current()->getName() == 'admin.posts.index' || 'admin.posts.create' ? 'active' : '' }}">
+            <a href="#" class="nav-link {{ Route::current()->getName() == 'admin.posts.index' ? 'active' : '' }}
+                                        {{ Route::current()->getName() == 'admin.posts.create' ? 'active' : '' }}">
               <i class="nav-icon fas fa-book"></i>
-              <p>
-                Convocatoria
-                <i class="right fas fa-angle-left"></i>
-              </p>
+                    <p>
+                      Convocatoria
+                      <i class="right fas fa-angle-left"></i>
+                    </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item active">
-                <a {{ Request::is('admin3/posts') ? 'active' : '' }} href="{{route('admin.posts.index')}}"
+              <li class="nav-item ">
+                <a {{ request()->is('admin3/posts') ? 'active' : '' }} href="{{route('admin.posts.index')}}"
                 class="nav-link {{ Route::current()->getName() == 'admin.posts.index' ? 'active' : '' }}">
                   <i class="far fa-eye nav-icon"></i>
                   <p>Ver Convocatoria</p>
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item ">
                 <a href="{{route('admin.posts.create')}}" class="nav-link {{ Route::current()->getName() == 'admin.posts.create' ? 'active' : '' }}">
                   <i class="far fa-edit nav-icon"></i>
                   <p>Crear una Convocatoria</p>
@@ -39,7 +40,35 @@
             </ul>
           </li>
           <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link "> {{-- active --}}
+            <a href="#" class="nav-link {{ Route::current()->getName() == 'admin.users.index' ? 'active' : '' }}
+                                        {{ Route::current()->getName() == 'admin.users.create' ? 'active' : '' }}">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Usuarios
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item active">
+                <a href="{{route('admin.users.index')}}"
+                class="nav-link {{ Route::current()->getName() == 'admin.users.index' ? 'active' : '' }}">
+                  <i class="far fa-eye nav-icon"></i>
+                  <p>Ver usuarios</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('admin.users.create')}}"
+                class="nav-link
+                {{ Route::current()->getName() == 'admin.users.create' ? 'active' : '' }}">
+                  <i class="far fa-user nav-icon"></i>
+                  <p>Crear un usuario</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link {{ Route::current()->getName() == 'admin.users.index' ? 'active' : '' }}
+                                        {{ Route::current()->getName() == 'admin.users.create' ? 'active' : '' }}">
               <i class="nav-icon fa fa-copy"></i>
               <p>
                 Requisitos
@@ -63,7 +92,7 @@
 
             </ul>
           </li>
-                    <li class="nav-item has-treeview menu-open">
+          <li class="nav-item has-treeview menu-open">
             <a href="#" class="nav-link "> {{-- active --}}
               <i class="nav-icon fa fa-copy"></i>
               <p>
@@ -79,14 +108,7 @@
                   <p>Crear TCM</p>
                 </a>
               </li>
-{{--               <li class="nav-item">
-                <a href="{{route('admin.posts.create')}}" class="nav-link {{ Route::current()->getName() == 'admin.posts.create' ? 'active' : '' }}">
-                  <i class="far fa-file-alt nav-icon"></i>
-                  <p>Crear Req Generales</p>
-                </a>
-              </li> --}}
-
             </ul>
-          </li>
-        </ul>
-      </nav>
+        </li>
+       </ul>
+     </nav>

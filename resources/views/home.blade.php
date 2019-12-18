@@ -44,7 +44,7 @@
 											</div>
 											<div class="tags container-flex">
 												@foreach ($post->tags as $tag)
-												<span class="tag c-gray-1 text-capitalize">#{{$tag->name}}</span>
+												<span class="tag c-gray-1 text-capitalize">Cod: {{$tag->name}}</span>
 												@endforeach
 											</div>
 										</footer>

@@ -1,5 +1,4 @@
 <?php
-
 Route::get('login/{socialNetwork}','SocialLoginController@redirectToSocialNetwork')
 ->name('login.social')->middleware('guest','social_network');
 Route::get('login/{socialNetwork}/callback','SocialLoginController@handleSocialNetworkCallback')
@@ -32,6 +31,15 @@ function(){
     Route::get('posts', 'PostsController@index')->name('admin.posts.index');
     Route::get('posts/create', 'PostsController@create')->name('admin.posts.create');
     Route::post('posts/create', 'PostsController@store')->name('admin.posts.store');
+    Route::get('users', 'UsersController@index')->name('admin.users.index');
+    Route::get('users/{user}', 'UsersController@show')->name('admin.users.show');
+    Route::get('users/{user}/editar', 'UsersController@edit')->name('admin.users.edit');
+    Route::put('users/{user}', 'UsersController@update')->name('admin.users.update');
+    Route::get('users/crear/nuevo', 'UsersController@create')->name('admin.users.create');
+    Route::post('users/user2/crear', 'UsersController@store')->name('admin.users.store');
+    // Route::get('users', 'UsersController@destroy')->name('admin.users.destroy');
+
+    Route::put('users/{user}/roles', 'UsersRolesController@update')->name('admin.users.roles.update');
 });
 
 Route::get('/portafolio', 'ProjectController@index')->name('projects.index');
@@ -43,7 +51,7 @@ Route::get('/portafolio/{project}','ProjectController@show')->name('projects.sho
 Route::delete('/portafolio/{project}' , 'ProjectController@destroy')->name('projects.destroy');
 
 
-Route::get('/admin', 'UsersController@index')->name('admin.users.index');
+Route::get('/admin', 'UsersController@index')->name('users.index');
 Route::post('/impersonations', 'ImpersonationsController@store')->name('impersonations.store');
 Route::delete('/impersonations', 'ImpersonationsController@destroy')->name('impersonations.destroy');
 

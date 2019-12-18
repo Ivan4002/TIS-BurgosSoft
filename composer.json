@@ -10,6 +10,7 @@
         "laravel/socialite": "^3.3",
         "laravel/tinker": "~1.0",
         "s-ichikawa/laravel-sendgrid-driver": "1.0.0",
+        "silber/bouncer": "v1.0.0-rc.6",
         "spatie/laravel-permission": "^1.18"
     },
     "require-dev": {

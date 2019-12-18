@@ -33,7 +33,7 @@
 				@auth
 				<li class="nav-item espacio">
 
-					<a href="{{ route('admin.users.index') }}">Usuarios</a></li>
+					<a href="{{ route('users.index') }}">Usuarios</a></li>
 					<li class="nav-item espacio"><a class="nav-link" href="#" onclick="event.preventDefault();
 	                     document.getElementById('logout-form').submit();"
 	                     >Cerrar sesión</a>
@@ -46,7 +46,7 @@
 				<form  method="POST" action=" {{route('impersonations.destroy')}} "
 					class="navbar-form pull-right">
 					{{ csrf_field() }} {{ method_field('DELETE') }}
-					<button type="submit" class="btn btn-danger">Dejar de personificar</button>
+					<button type="submit" class="btn btn-danger">Despersonificar</button>
 				</form>
 				@endif
 

@@ -39,4 +39,27 @@ class User extends Authenticatable
 
             return $this->profiles->last()->avatar;
     }
+    public function roles()
+    {
+       return $this->belongsToMany(Role::class,'assigned_roles');
+    }
+    public function hasRoles(array $roles)
+    {
+        foreach ($roles as $role)
+        {
+             foreach ($this->roles as $userRole)
+             {
+
+                if ($userRole->name === $role)
+                {
+                    return true;
+                }
+             }
+        }
+        return false;
+    }
+    public function setPasswordAttribute($password)
+    {
+        $this->attributes['password'] = bcrypt($password);
+    }
 }
