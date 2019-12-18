@@ -24,7 +24,7 @@
 				<i class="fa fa-users"></i>
 				Acerca de nosotros</a></li>
 
-				<li class="nav-item espacio"><a class="nav-link {{ setActive('projects.index') }}" href="{{ route('projects.index') }} ">Requisitos</a></li>
+				<li class="nav-item espacio"><a class="nav-link {{ setActive('projects.index') }}" href="{{ route('projects.index') }} ">Participar</a></li>
 
 				<li class="nav-item espacio"><a class="nav-link {{ setActive('contact') }}" href="{{ route('contact') }} ">
 				<i class="fa fa-envelope-open"></i>
